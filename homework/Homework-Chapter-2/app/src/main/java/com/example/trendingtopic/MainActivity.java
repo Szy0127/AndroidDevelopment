@@ -8,12 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +59,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTopics()
     {
+        Topic topic = null;
+        try {
+            InputStream txt=getResources().openRawResource(R.raw.topicdata);
 
+            InputStreamReader inputStreamReader = new InputStreamReader(txt);
+            BufferedReader reader = new BufferedReader(inputStreamReader);
+
+            int i = 0;
+            String line = null;
+            while ((line=reader.readLine())!=null) {
+                //Toast.makeText(MainActivity.this,line,Toast.LENGTH_SHORT).show();
+                i++;
+                String[] info = line.split(" ");
+                topic = new Topic(i,info[0],Integer.valueOf(info[1]),info[2]);
+                topicList.add(topic);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /*
         Topic topic = new Topic(1,"最高检察报告点名辣笔小球",2190475,"英烈不容诋毁、法律不容挑衅！最高人民检察院工作报告指出，网络大V“辣笔小球”恶意诋毁贬损卫国戍边英雄官兵，江苏检察机关迅速介入，依法适用今年3月1日起施行的刑法修正案（十一），首次以涉嫌侵害英雄烈士名誉、荣誉罪批准逮捕，并在军事检察机关支持配合下，开展公益诉讼调查。");
         topicList.add(topic);
         topic = new Topic(2,"浙江有20例隔离后阳性病例",1194292,"浙江今年已有20例14天隔离期后阳性病例#截至3月7日24时，正在浙江省内隔离的入境人员4206人。今年以来，全省在14天集中隔离医学观察的入境人员中累计发现16例确诊病例、29例无症状感染者。全省已报告20例14天隔离期满后发现的核酸检测阳性病例，有效阻断了隐性传染源");
@@ -97,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         topicList.add(topic);
         topic = new Topic(20,"美图董事长回应买加密货币",711073,"区块链技术具有颠覆现有金融和科技行业的潜力，加密货币具有足够的升值空间，并且在此时通过将其部分现金储备金分配到加密货币。 越来越多的企业开始投资比特币，而且国外很多产品也已经可以通过比特币去支付，或许不久的将来国内也会这样？看看巴菲特对区块链和比特币的看法！");
         topicList.add(topic);
-
+        */
 
     }
 }
