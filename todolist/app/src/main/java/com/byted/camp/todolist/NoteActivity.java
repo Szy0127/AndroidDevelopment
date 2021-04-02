@@ -219,7 +219,7 @@ public class NoteActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (change)
+        if (change && !TextUtils.isEmpty(editText.getText()))
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(NoteActivity.this);
             builder.setMessage("是否保存后再退出？");
