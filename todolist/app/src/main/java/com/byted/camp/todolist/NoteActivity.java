@@ -116,6 +116,8 @@ public class NoteActivity extends AppCompatActivity {
         selectDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                InputMethodManager m = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                m .hideSoftInputFromWindow(editText.getWindowToken(), 0);
                 if(showDate)
                 {
                     datePicker.setVisibility(View.GONE);
