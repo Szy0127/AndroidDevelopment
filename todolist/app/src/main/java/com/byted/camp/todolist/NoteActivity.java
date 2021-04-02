@@ -219,29 +219,35 @@ public class NoteActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (change && !TextUtils.isEmpty(editText.getText()))
-        {
-            AlertDialog.Builder builder = new AlertDialog.Builder(NoteActivity.this);
-            builder.setMessage("是否保存后再退出？");
-            builder.setPositiveButton("不保存", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss(); // 取消对话框
-                    finish();
-                }
-            });
+        CharSequence content = editText.getText();
+        if (change && !TextUtils.isEmpty(content)) {
+            if (content.toString().equals(note.getContent()) && year == note.getYear() && month == note.getMonth() && day == note.getDay() && getSelectedPriority() == note.getPriority())
+            {
+                finish();
+            }
+            else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(NoteActivity.this);
+                builder.setMessage("是否保存后再退出？");
+                builder.setPositiveButton("不保存", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss(); // 取消对话框
+                        finish();
+                    }
+                });
 
-            builder.setNegativeButton("保存", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    // TODO Auto-generated method stub
-                    dialog.dismiss(); // 取消对话框
-                    submit();
-                    finish();
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show(); // 显示对话框
+                builder.setNegativeButton("保存", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                        dialog.dismiss(); // 取消对话框
+                        submit();
+                        finish();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show(); // 显示对话框
+            }
         }
         else{
             finish();
