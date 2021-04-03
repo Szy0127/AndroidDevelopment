@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\SZYprogram\\android\\demo\\chapter-6-master\\assignment\\todolist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "E:\\SZYprogram\\android\\homework\\Homework-Chapter-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Shen\\.gradle\\caches\\transforms-2\\files-2.1\\fc310cfdd26e3b9d434e0812480c5836\\res\\values-fr-rCA\\values-fr-rCA.xml",

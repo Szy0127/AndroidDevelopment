@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\SZYprogram\\android\\demo\\chapter-6-master\\assignment\\todolist\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
+            "outputFile": "E:\\SZYprogram\\android\\homework\\Homework-Chapter-6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Shen\\.gradle\\caches\\transforms-2\\files-2.1\\bc4a0eaa415c8f2feb1d1b52d32a33f7\\res\\values-uk\\values-uk.xml",
