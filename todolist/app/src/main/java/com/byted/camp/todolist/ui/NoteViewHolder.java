@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -15,6 +16,7 @@ import com.byted.camp.todolist.beans.Note;
 import com.byted.camp.todolist.beans.State;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class NoteViewHolder extends RecyclerView.ViewHolder {
@@ -24,6 +26,7 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
     private CheckBox checkBox;
     private TextView contentText;
     private TextView dateText;
+    private TextView dayText;
     private View deleteBtn;
 
     public NoteViewHolder(@NonNull View itemView, NoteOperator operator) {
@@ -34,12 +37,21 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         contentText = itemView.findViewById(R.id.text_content);
         dateText = itemView.findViewById(R.id.text_date);
         deleteBtn = itemView.findViewById(R.id.btn_delete);
+        dayText = itemView.findViewById(R.id.days_remain);
     }
 
     public void bind(final Note note) {
         contentText.setText(note.getContent());
         String str=note.getYear()+"-"+note.getMonth()+"-"+note.getDay();
         dateText.setText(str);
+
+        Calendar date_now =Calendar.getInstance();
+        Calendar deadline =Calendar.getInstance();
+        date_now.set(date_now.get(Calendar.YEAR),date_now.get(Calendar.MONTH)+1,date_now.get(Calendar.DAY_OF_MONTH));
+        deadline.set(note.getYear(),note.getMonth(),note.getDay());
+
+        int remain_day = deadline.get(Calendar.DAY_OF_YEAR)-date_now.get((Calendar.DAY_OF_YEAR))+365*(deadline.get(Calendar.YEAR)-date_now.get(Calendar.YEAR));
+        dayText.setText(String.valueOf(remain_day));
 
         checkBox.setOnCheckedChangeListener(null);
         checkBox.setChecked(note.getState() == State.DONE);
@@ -66,5 +78,6 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         }
 
         itemView.setBackgroundColor(note.getPriority().color);
+        itemView.getBackground().setAlpha(180);
     }
 }

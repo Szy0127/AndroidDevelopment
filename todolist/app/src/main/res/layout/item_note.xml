@@ -14,22 +14,34 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/days_remain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkbox"
+        android:layout_marginLeft="5dp"
+        android:textColor="#ee0000"
+        android:textSize="25sp"
+        tools:text="31" />
+
+
+    <TextView
         android:id="@+id/text_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/checkbox"
         android:layout_toStartOf="@+id/btn_delete"
+        android:layout_alignStart="@id/text_date"
         android:textColor="#1e1e1e"
         android:textSize="25sp"
-        tools:text="This is a very very long content to test multiple lines display" />
+        tools:text="content" />
 
     <TextView
         android:id="@+id/text_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/text_content"
         android:layout_below="@id/text_content"
+        android:layout_toEndOf="@+id/days_remain"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:textColor="#0000ff"
         android:textSize="20sp"

@@ -102,8 +102,8 @@ public class NoteActivity extends AppCompatActivity {
                 mediumRadio.setChecked(true);
                 Calendar calendar=Calendar.getInstance();
                 year = calendar.get(Calendar.YEAR);
-                month=calendar.get(calendar.MONTH)+1;
-                day=calendar.get(calendar.DAY_OF_MONTH);
+                month=calendar.get(Calendar.MONTH)+1;
+                day=calendar.get(Calendar.DAY_OF_MONTH);
                 title = "新建事项";
             }
 
@@ -223,6 +223,7 @@ public class NoteActivity extends AppCompatActivity {
         if (change && !TextUtils.isEmpty(content)) {
             if (content.toString().equals(note.getContent()) && year == note.getYear() && month == note.getMonth() && day == note.getDay() && getSelectedPriority() == note.getPriority())
             {
+                setResult(Activity.RESULT_CANCELED);
                 finish();
             }
             else{
@@ -239,7 +240,6 @@ public class NoteActivity extends AppCompatActivity {
                 builder.setNegativeButton("保存", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // TODO Auto-generated method stub
                         dialog.dismiss(); // 取消对话框
                         submit();
                         finish();

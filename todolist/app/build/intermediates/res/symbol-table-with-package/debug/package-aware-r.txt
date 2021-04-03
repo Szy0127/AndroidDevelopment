@@ -15,6 +15,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim top_defaults_view_color_picker_popup_hide
+anim top_defaults_view_color_picker_popup_show
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -214,6 +216,8 @@ attr editTextColor
 attr editTextStyle
 attr elevation
 attr emptyVisibility
+attr enableAlpha
+attr enableBrightness
 attr enforceMaterialTheme
 attr enforceTextAppearance
 attr errorEnabled
@@ -388,6 +392,7 @@ attr navigationIcon
 attr navigationMode
 attr navigationViewStyle
 attr numericModifiers
+attr onlyUpdateOnTouchEventUp
 attr overlapAnchor
 attr paddingBottomNoButtons
 attr paddingEnd
@@ -1004,6 +1009,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_edit
+drawable bgp
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1048,9 +1054,9 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_change_color
 id action_container
 id action_context_bar
-id action_debug
 id action_divider
 id action_image
 id action_menu_divider
@@ -1058,7 +1064,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
+id action_recover
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1080,6 +1086,7 @@ id btn_medium
 id btn_print_path
 id btn_request_permission
 id buttonPanel
+id cancel
 id center
 id center_horizontal
 id center_vertical
@@ -1089,6 +1096,13 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id colorHex
+id colorIndicator
+id colorPicker
+id colorPickerView
+id color_high
+id color_low
+id color_medium
 id container
 id content
 id contentPanel
@@ -1097,6 +1111,7 @@ id custom
 id customPanel
 id datePicker
 id date_text
+id days_remain
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1158,6 +1173,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id ok
 id outline
 id packed
 id parallax
@@ -1166,6 +1182,7 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id priority_text
 id progress_circular
 id progress_horizontal
 id radio
@@ -1199,6 +1216,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id show_color
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1236,6 +1254,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -1300,6 +1319,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_color
 layout activity_debug
 layout activity_main
 layout activity_note
@@ -1331,6 +1351,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout top_defaults_view_color_picker_popup
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1373,8 +1394,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string action_debug
-string action_settings
+string action_change_color
+string action_recover
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -1776,6 +1797,7 @@ style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style TopDefaultsViewColorPickerPopupAnimation
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -1924,6 +1946,7 @@ styleable Chip android_textAppearance android_ellipsize android_maxWidth android
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
+styleable ColorPickerView enableAlpha enableBrightness onlyUpdateOnTouchEventUp
 styleable ColorStateListItem android_color android_alpha alpha
 styleable CompoundButton android_button buttonTint buttonTintMode
 styleable ConstraintLayout_Layout android_orientation android_maxWidth android_maxHeight android_minWidth android_minHeight barrierAllowsGoneWidgets barrierDirection chainUseRtl constraintSet constraint_referenced_ids layout_constrainedHeight layout_constrainedWidth layout_constraintBaseline_creator layout_constraintBaseline_toBaselineOf layout_constraintBottom_creator layout_constraintBottom_toBottomOf layout_constraintBottom_toTopOf layout_constraintCircle layout_constraintCircleAngle layout_constraintCircleRadius layout_constraintDimensionRatio layout_constraintEnd_toEndOf layout_constraintEnd_toStartOf layout_constraintGuide_begin layout_constraintGuide_end layout_constraintGuide_percent layout_constraintHeight_default layout_constraintHeight_max layout_constraintHeight_min layout_constraintHeight_percent layout_constraintHorizontal_bias layout_constraintHorizontal_chainStyle layout_constraintHorizontal_weight layout_constraintLeft_creator layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_creator layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintTop_creator layout_constraintTop_toBottomOf layout_constraintTop_toTopOf layout_constraintVertical_bias layout_constraintVertical_chainStyle layout_constraintVertical_weight layout_constraintWidth_default layout_constraintWidth_max layout_constraintWidth_min layout_constraintWidth_percent layout_editor_absoluteX layout_editor_absoluteY layout_goneMarginBottom layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginRight layout_goneMarginStart layout_goneMarginTop layout_optimizationLevel

@@ -25,7 +25,6 @@ import com.byted.camp.todolist.beans.Priority;
 import com.byted.camp.todolist.beans.State;
 import com.byted.camp.todolist.db.TodoContract.TodoNote;
 import com.byted.camp.todolist.db.TodoDbHelper;
-import com.byted.camp.todolist.debug.DebugActivity;
 import com.byted.camp.todolist.ui.NoteListAdapter;
 
 
@@ -37,19 +36,30 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int REQUEST_CODE_ADD = 1002;
+    public static final int REQUEST_CODE_ADD = 1002;
+    public static final int REQUEST_CODE_MODIFY = 1003;
+    public static final int REQUEST_CODE_CHANGE_COLOR = 1004;
 
     private RecyclerView recyclerView;
     private NoteListAdapter notesAdapter;
 
     private TodoDbHelper dbHelper;
     private SQLiteDatabase database;
+    private SharedPreferences spdata;
+    SharedPreferences.Editor editor;
+
+    private List<Note> notes;
+    private int color_high;
+    private int color_medium;
+    private int color_low;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("代办事项列表");
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +72,24 @@ public class MainActivity extends AppCompatActivity {
                         REQUEST_CODE_ADD);
             }
         });
+
+        spdata = getSharedPreferences("data",MODE_PRIVATE);
+        editor = spdata.edit();
+        color_high = spdata.getInt("color_high",0);
+        color_medium = spdata.getInt("color_medium",0);
+        color_low = spdata.getInt("color_low",0);
+        if(color_high == 0 || color_medium == 0 || color_low == 0)
+        {
+            editor.putInt("color_high",Priority.High.color);
+            editor.putInt("color_medium",Priority.Medium.color);
+            editor.putInt("color_low",Priority.Low.color);
+            editor.apply();
+        }
+        else {
+                Priority.High.color = color_high;
+                Priority.Medium.color = color_medium;
+                Priority.Low.color = color_low;
+            }
 
         //File dbFile = new File("/data/data/com.byted.camp.todolist/databases/todo.db");
         //dbFile.delete();
@@ -87,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(notesAdapter);
 
-        notesAdapter.refresh(loadNotesFromDatabase());
+        notes = loadNotesFromDatabase();
+        notesAdapter.refresh(notes);
     }
 
     @Override
@@ -97,20 +126,50 @@ public class MainActivity extends AppCompatActivity {
         database = null;
         dbHelper.close();
         dbHelper = null;
+
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        notesAdapter.refresh(loadNotesFromDatabase());
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_change_color:
+                startActivityForResult(new Intent(this, Color.class),REQUEST_CODE_CHANGE_COLOR);
+                return true;
+            case R.id.action_recover:
+                return true;
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_ADD
+        if ((requestCode == REQUEST_CODE_ADD||requestCode == REQUEST_CODE_MODIFY)
                 && resultCode == Activity.RESULT_OK) {
-            notesAdapter.refresh(loadNotesFromDatabase());
+            notes = loadNotesFromDatabase();
+            notesAdapter.refresh(notes);
+        }
+        if(requestCode == REQUEST_CODE_CHANGE_COLOR
+                && resultCode == Activity.RESULT_OK)
+        {
+            notesAdapter.refresh(notes);
+            if(Priority.High.color != color_high || Priority.Medium.color != color_medium || Priority.Low.color != color_low)
+            {
+                editor.putInt("color_high",Priority.High.color);
+                editor.putInt("color_medium",Priority.Medium.color);
+                editor.putInt("color_low",Priority.Low.color);
+                editor.apply();
+            }
         }
     }
 

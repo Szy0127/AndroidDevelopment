@@ -7,8 +7,8 @@ public enum Priority {
     Medium(1, Color.WHITE),
     Low(0, Color.GREEN);
 
-    public final int intValue;
-    public final int color;
+    public int intValue;
+    public int color;
 
     Priority(int intValue, int color) {
         this.intValue = intValue;

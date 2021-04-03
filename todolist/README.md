@@ -6,6 +6,7 @@
  - 点击加号进入NoteActivity(新建模式)  
  - 长按Note进入NoteActivity(修改模式)  
  - Note 按时间排序
+ - Menu设置颜色进入ColorActivity
 
 2. NoteActivity
  - 默认priority为Normal 截止日期为当天
@@ -16,3 +17,7 @@
  - 修改模式下 返回时会询问是否保存(若不满足以下条件则直接返回且不保存修改)
     - content不为空
     - 至少修改了一个属性
+
+3. ColorActivity
+  - ColorPickerView选择颜色
+  - 提交后修改三个Priority对应的颜色并存储至SharedPreference中
