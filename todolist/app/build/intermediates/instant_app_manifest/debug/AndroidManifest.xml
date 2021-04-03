@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.byted.camp.todolist.Color" />
+        <activity android:name="com.byted.camp.todolist.BackgroundActivity" />
+        <activity android:name="com.byted.camp.todolist.ColorActivity" />
         <activity
             android:name="com.byted.camp.todolist.MainActivity"
             android:label="@string/app_name"
@@ -32,7 +33,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.byted.camp.todolist.NoteActivity" />
-        <activity android:name="com.byted.camp.todolist.Color" />
     </application>
 
 </manifest>

@@ -8,8 +8,8 @@
         android:title="@string/action_change_color"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_recover"
+        android:id="@+id/action_change_background"
         android:orderInCategory="100"
-        android:title="@string/action_recover"
+        android:title="@string/action_change_background"
         app:showAsAction="never" />
 </menu>

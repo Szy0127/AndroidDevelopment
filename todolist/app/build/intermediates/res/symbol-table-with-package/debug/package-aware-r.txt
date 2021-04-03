@@ -1009,7 +1009,6 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_edit
-drawable bgp
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1024,6 +1023,8 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable jienigui
+drawable jiqimao
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1039,6 +1040,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pikaqiu
+drawable shidiqi
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1054,6 +1057,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_change_background
 id action_change_color
 id action_container
 id action_context_bar
@@ -1064,7 +1068,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_recover
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1083,8 +1086,6 @@ id btn_delete
 id btn_high
 id btn_low
 id btn_medium
-id btn_print_path
-id btn_request_permission
 id buttonPanel
 id cancel
 id center
@@ -1151,6 +1152,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id jienigui
+id jiqimao
 id labeled
 id largeLabel
 id left
@@ -1181,6 +1184,7 @@ id parent
 id parentPanel
 id parent_matrix
 id percent
+id pikaqiu
 id pin
 id priority_text
 id progress_circular
@@ -1212,6 +1216,7 @@ id search_voice_btn
 id select_date
 id select_dialog_listview
 id selected
+id shidiqi
 id shortcut
 id showCustom
 id showHome
@@ -1246,7 +1251,6 @@ id textStart
 id text_content
 id text_date
 id text_input_password_toggle
-id text_path
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1319,8 +1323,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_background
 layout activity_color
-layout activity_debug
 layout activity_main
 layout activity_note
 layout content_main
@@ -1394,8 +1398,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_change_background
 string action_change_color
-string action_recover
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

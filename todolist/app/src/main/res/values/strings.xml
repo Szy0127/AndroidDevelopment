@@ -4,7 +4,7 @@
 
     <!-- Main -->
     <string name="action_change_color">设置颜色</string>
-    <string name="action_recover">恢复默认设置</string>
+    <string name="action_change_background">设置背景图片</string>
 
     <!-- Debug -->
     <string name="print_absolute_path">Print absolute path</string>

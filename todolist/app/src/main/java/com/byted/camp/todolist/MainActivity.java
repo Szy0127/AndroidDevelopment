@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_ADD = 1002;
     public static final int REQUEST_CODE_MODIFY = 1003;
     public static final int REQUEST_CODE_CHANGE_COLOR = 1004;
+    public static final int REQUEST_CODE_CHANGE_BACKGROUND = 1005;
 
     private RecyclerView recyclerView;
     private NoteListAdapter notesAdapter;
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     private int color_high;
     private int color_medium;
     private int color_low;
+    public static String background;
+    public int backgroundID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
         spdata = getSharedPreferences("data",MODE_PRIVATE);
         editor = spdata.edit();
+//        editor.remove("background");
+//        editor.apply();
         color_high = spdata.getInt("color_high",0);
         color_medium = spdata.getInt("color_medium",0);
         color_low = spdata.getInt("color_low",0);
@@ -90,6 +95,21 @@ public class MainActivity extends AppCompatActivity {
                 Priority.Medium.color = color_medium;
                 Priority.Low.color = color_low;
             }
+        background = spdata.getString("background","none");
+        if(background.equals("none"))
+        {
+            editor.putString("background","jienigui");
+            editor.apply();
+            background = "jienigui";
+        }
+        try {
+            backgroundID = R.drawable.class.getField(background).getInt(new R.drawable());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        getWindow().getDecorView().setBackgroundResource(backgroundID);
 
         //File dbFile = new File("/data/data/com.byted.camp.todolist/databases/todo.db");
         //dbFile.delete();
@@ -140,9 +160,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_change_color:
-                startActivityForResult(new Intent(this, Color.class),REQUEST_CODE_CHANGE_COLOR);
+                startActivityForResult(new Intent(this, ColorActivity.class),REQUEST_CODE_CHANGE_COLOR);
                 return true;
-            case R.id.action_recover:
+            case R.id.action_change_background:
+                startActivityForResult(new Intent(this, BackgroundActivity.class),REQUEST_CODE_CHANGE_BACKGROUND);
                 return true;
             default:
                 break;
@@ -154,13 +175,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if ((requestCode == REQUEST_CODE_ADD||requestCode == REQUEST_CODE_MODIFY)
-                && resultCode == Activity.RESULT_OK) {
+        if ((requestCode == REQUEST_CODE_ADD||requestCode == REQUEST_CODE_MODIFY)&& resultCode == Activity.RESULT_OK)
+        {
             notes = loadNotesFromDatabase();
             notesAdapter.refresh(notes);
         }
-        if(requestCode == REQUEST_CODE_CHANGE_COLOR
-                && resultCode == Activity.RESULT_OK)
+        if(requestCode == REQUEST_CODE_CHANGE_COLOR&& resultCode == Activity.RESULT_OK)
         {
             notesAdapter.refresh(notes);
             if(Priority.High.color != color_high || Priority.Medium.color != color_medium || Priority.Low.color != color_low)
@@ -170,6 +190,20 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("color_low",Priority.Low.color);
                 editor.apply();
             }
+        }
+        if(requestCode == REQUEST_CODE_CHANGE_BACKGROUND&& resultCode == Activity.RESULT_OK)
+        {
+            try {
+                backgroundID = R.drawable.class.getField(background).getInt(new R.drawable());
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+            getWindow().getDecorView().setBackgroundResource(backgroundID);
+
+            editor.putString("background",background);
+            editor.apply();
         }
     }
 

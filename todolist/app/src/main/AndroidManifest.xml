@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Color"></activity>
+        <activity android:name=".BackgroundActivity"></activity>
+        <activity android:name=".ColorActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -25,9 +26,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".NoteActivity" />
-        <activity android:name=".Color"
-            tools:ignore="DuplicateActivity"
-            />
     </application>
 
 </manifest>

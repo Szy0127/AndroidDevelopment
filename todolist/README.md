@@ -7,6 +7,7 @@
  - 长按Note进入NoteActivity(修改模式)  
  - Note 按时间排序
  - Menu设置颜色进入ColorActivity
+ - Menu设置背景进入BackgroundActivity
 
 2. NoteActivity
  - 默认priority为Normal 截止日期为当天
@@ -21,3 +22,6 @@
 3. ColorActivity
   - ColorPickerView选择颜色
   - 提交后修改三个Priority对应的颜色并存储至SharedPreference中
+  
+4. BackgroundActivity
+  - 点击图片直接退出并更换背景 同时存储至SharedPreference中

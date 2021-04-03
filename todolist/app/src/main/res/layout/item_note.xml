@@ -33,7 +33,7 @@
         android:layout_alignStart="@id/text_date"
         android:textColor="#1e1e1e"
         android:textSize="25sp"
-        tools:text="content" />
+        tools:text="content"/>
 
     <TextView
         android:id="@+id/text_date"

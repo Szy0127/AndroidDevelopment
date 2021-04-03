@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\13bc91cd120fff37ff9c95577a9fb591\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.duanhong169:colorpicker:1.1.6] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\216dd47cfd7f3074cdc53c2af5112a36\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.duanhong169:checkerboarddrawable:1.0.2] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\f6b3531c15191887341f28c6b2d11b33\AndroidManifest.xml:2:1-11:12
@@ -13,15 +13,15 @@ MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Shen\.gradle\
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\43e92d7e15dc6a7a0a82d643ba1d1cb5\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\8a45050d58c6d1ea10849f9ca25cc049\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\2571cb7574060843f0c307e935f41a69\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\d9c9a5341c938fe8c3fd2162e919ae79\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\7eba5127c486ec1393c59631a16ab027\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\99c823ec87d089853e73e1ac6078160d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\0a763b285f7db875cf253f3d2b0623ef\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\231263817e1d0a12886bf4c410a7b993\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\161f772e1331f280e41f2da64547cdac\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:customview:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\ab9a6518535a3dca5d1243e79e22458e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\46827839d821789ff00c242ec6591e52\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\eae34a566392f1f8809936aa4f471d5a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\bc4a0eaa415c8f2feb1d1b52d32a33f7\AndroidManifest.xml:17:1-24:12
@@ -38,22 +38,22 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Shen\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\4c2d5d6e8755bff57d204c14dca1abde\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\c3c3f5215680af4dd639ee93bfec5588\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.duanhong169:logger:1.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\32807f06d59e0c61796d2065dd8d0496\AndroidManifest.xml:2:1-11:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:4:5-38
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:2:11-69
@@ -62,7 +62,7 @@ ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:6:5-8
 	android:name
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:6:22-78
 application
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:8:5-31:19
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:8:5-29:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\13bc91cd120fff37ff9c95577a9fb591\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\13bc91cd120fff37ff9c95577a9fb591\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\5e12a96d7ab29e48d1f4f6bf69c32eb1\AndroidManifest.xml:9:5-20
@@ -87,34 +87,36 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Shen\.grad
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
 		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:14:9-40
-activity#com.byted.camp.todolist.Color
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:16:9-52
-	tools:ignore
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:29:13-45
+activity#com.byted.camp.todolist.BackgroundActivity
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:16:9-65
 	android:name
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:16:19-40
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:16:19-53
+activity#com.byted.camp.todolist.ColorActivity
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:17:9-51
+	android:name
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:17:19-48
 activity#com.byted.camp.todolist.MainActivity
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:17:9-26:20
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:19:13-45
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:20:13-45
 	android:theme
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:20:13-56
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:21:13-56
 	android:name
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.byted.camp.todolist.NoteActivity
-ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:27:9-50
+ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:28:9-50
 	android:name
-		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:27:19-47
+		ADDED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml:28:19-47
 uses-sdk
 INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\SZYprogram\android\todolist\app\src\main\AndroidManifest.xml
@@ -137,16 +139,14 @@ MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Shen\.gradle\c
 MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\8a45050d58c6d1ea10849f9ca25cc049\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\2571cb7574060843f0c307e935f41a69\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\2571cb7574060843f0c307e935f41a69\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\d9c9a5341c938fe8c3fd2162e919ae79\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\d9c9a5341c938fe8c3fd2162e919ae79\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\7eba5127c486ec1393c59631a16ab027\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\7eba5127c486ec1393c59631a16ab027\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\99c823ec87d089853e73e1ac6078160d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\99c823ec87d089853e73e1ac6078160d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\65178157a3231d6534565aaae2819fc6\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\0a763b285f7db875cf253f3d2b0623ef\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\0a763b285f7db875cf253f3d2b0623ef\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\231263817e1d0a12886bf4c410a7b993\AndroidManifest.xml:20:5-44
@@ -155,6 +155,8 @@ MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Shen\.gradle
 MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\161f772e1331f280e41f2da64547cdac\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customview:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\ab9a6518535a3dca5d1243e79e22458e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customview:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\ab9a6518535a3dca5d1243e79e22458e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\fcd8e2109335648048096eb9bdea2e78\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\46827839d821789ff00c242ec6591e52\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\46827839d821789ff00c242ec6591e52\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Shen\.gradle\caches\transforms-2\files-2.1\eae34a566392f1f8809936aa4f471d5a\AndroidManifest.xml:20:5-44

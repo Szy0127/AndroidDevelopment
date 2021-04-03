@@ -2,6 +2,7 @@ package com.byted.camp.todolist.ui;
 
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
+import com.byted.camp.todolist.MainActivity;
 import com.byted.camp.todolist.NoteOperator;
 import com.byted.camp.todolist.R;
 import com.byted.camp.todolist.beans.Note;
@@ -28,7 +30,7 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
     private TextView dateText;
     private TextView dayText;
     private View deleteBtn;
-
+    Typeface typeface;
     public NoteViewHolder(@NonNull View itemView, NoteOperator operator) {
         super(itemView);
         this.operator = operator;
@@ -38,10 +40,12 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         dateText = itemView.findViewById(R.id.text_date);
         deleteBtn = itemView.findViewById(R.id.btn_delete);
         dayText = itemView.findViewById(R.id.days_remain);
+        typeface =Typeface.createFromAsset(itemView.getContext().getAssets(),"STKAITI.TTF");
     }
 
     public void bind(final Note note) {
         contentText.setText(note.getContent());
+        contentText.setTypeface(typeface);
         String str=note.getYear()+"-"+note.getMonth()+"-"+note.getDay();
         dateText.setText(str);
 
