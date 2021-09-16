@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:tabIndicatorHeight="0dp"
+            android:layout_weight="1"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"/>
+        <include
+            layout="@layout/menu"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_btn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/colorBlack"-->
+<!--        >-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_all"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:text="首页"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:textSize="20dp"-->
+<!--            android:background="@color/colorBlack"-->
+<!--            />-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_upload"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:text="上传"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:textSize="20dp"-->
+<!--            android:background="@color/colorBlack"-->
+<!--            />-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_record"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:text="@string/record"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:textSize="20dp"-->
+<!--            android:background="@color/colorBlack"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_mine"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:text="我的"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:textSize="20dp"-->
+<!--            android:background="@color/colorBlack"-->
+<!--            />-->
+<!--    </LinearLayout>-->
